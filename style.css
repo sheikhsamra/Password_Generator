@@ -1,0 +1,117 @@
+/* Modern Glassmorphism Password Generator Style */
+
+:root {
+  --bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --card-bg: rgba(255, 255, 255, 0.12);
+  --border: rgba(255, 255, 255, 0.3);
+  --text: #fff;
+  --muted: #d1d5db;
+  --accent: #06b6d4;
+  --accent-hover: #0ea5e9;
+  --radius: 16px;
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Page setup */
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+  color: var(--text);
+  padding: 20px;
+}
+
+/* Card Container */
+.container {
+  width: 100%;
+  max-width: 450px;
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 32px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+  text-align: center;
+  animation: fadeIn 0.6s ease;
+}
+
+/* Title */
+.container h1 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+/* Inputs */
+input[type="number"],
+input[type="text"] {
+  width: 100%;
+  padding: 12px 14px;
+  margin: 10px 0;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text);
+  font-size: 15px;
+  outline: none;
+  transition: 0.2s;
+}
+
+/* Focus effect */
+input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.3);
+}
+
+/* Password field (readonly look) */
+#password {
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+/* Buttons */
+button {
+  cursor: pointer;
+  padding: 12px 18px;
+  margin: 10px 5px;
+  border-radius: 12px;
+  border: none;
+  font-weight: 500;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+/* Primary button */
+button:first-of-type {
+  background: var(--accent);
+  color: white;
+}
+
+button:first-of-type:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+}
+
+/* Secondary button */
+button:last-of-type {
+  background: rgba(255, 255, 255, 0.15);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+button:last-of-type:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+}
+
+/* Small animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
